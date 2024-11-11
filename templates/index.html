@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JWT DECODER</title>
+    <style>
+      form {
+        display: flex;
+        gap: 5px;
+      }
+      .flash-success {
+        color: green;
+      }
+      .flash-error {
+        color: red;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        max-width: 100%;
+        background-color: #f4f4f4;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JWT DECODER</h1>
+    <form method="POST">
+      <textarea
+        name="jwt_token"
+        rows="5"
+        cols="60"
+        placeholder="Enter JWT Token"
+      ></textarea
+      ><br /><br />
+      <button type="submit">Decode</button>
+    </form>
+    {% with messages = get_flashed_messages(with_categories=true) %} {% if
+    messages %}
+    <ul>
+      {% for category, message in messages %}
+      <li class="flash-{{ category }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %} {% endwith %} {% if decoded %}
+    <h2>Decoded JWT:</h2>
+    <pre>{{ decoded | safe }}</pre>
+    {% endif %}
+  </body>
+</html>
