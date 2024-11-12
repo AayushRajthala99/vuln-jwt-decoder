@@ -107,3 +107,6 @@ This application is intentionally designed to demonstrate the following vulnerab
 This project is open-source and available under the MIT License. 
 
 Feel free to contribute or report issues on the [GitHub repository](https://github.com/AayushRajthala99/vuln-jwt-decoder).
+
+## Disclaimer
+This project is created solely for educational purposes. It is intended to demonstrate the vulnerabilities associated with improper handling of JWT tokens and user input. Users are encouraged to understand the security implications of these vulnerabilities and to apply best practices in their own applications. The author does not take any responsibility for any misuse or malicious use of this code. Please use this project responsibly and ethically.
